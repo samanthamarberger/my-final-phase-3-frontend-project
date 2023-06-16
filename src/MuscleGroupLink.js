@@ -5,7 +5,7 @@ function MuscleGroupLink({ muscleGroup }) {
 
     return(
         <div>
-            <Link to={`http://localhost:3000/muscle-groups/${muscleGroup.id}`} >
+            <Link to={`/muscle-groups/${muscleGroup.id}`} >
                 <h3>{muscleGroup.name}</h3>
             </Link>
         </div>
