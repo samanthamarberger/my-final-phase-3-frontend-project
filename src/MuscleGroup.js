@@ -19,6 +19,19 @@ function MuscleGroup(props) {
 
     const exercises = muscleGroup.exercises.map((exercise) => <Exercise key={exercise.id} exercise={exercise} />)
 
+    // function addExercise(exercise) {
+    //     fetch(`http://localhost:9292/muscle_groups`,{
+    //         method: "POST",
+    //         header: {
+
+    //         },
+    //         body: json.stringify({
+    //             name: exercise.name,
+    //             muscle_group_id: params.id
+    //         })
+    //     })
+    // }
+
     return (
         <div>
             <br />
