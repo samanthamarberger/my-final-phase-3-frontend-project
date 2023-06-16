@@ -7,7 +7,7 @@ import {
 import Home from './Home';
 import NavBar from './NavBar';
 import MuscleGroups from './MuscleGroups';
-
+import MuscleGroup from './MuscleGroup';
 
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />}/>
           <Route path="/muscle-groups" element={<MuscleGroups />}/>
-          {/* <Route path="/muscle-groups/:id" element={<MuscleGroupShow />}/> */}
+          <Route path="/muscle-groups/:id" element={<MuscleGroup />}/>
         </Routes>
       </div>
     </Router>
