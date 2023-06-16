@@ -7,7 +7,7 @@ import {
 import Home from './Home';
 import NavBar from './NavBar';
 import MuscleGroups from './MuscleGroups';
-import MuscleGroupShow from './MuscleGroupShow';
+
 
 
 function App() {

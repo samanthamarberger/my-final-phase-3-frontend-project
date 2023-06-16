@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import MuscleGroupLink from "./MuscleGroupLink";
+
 
 function MuscleGroups() {
    const [muscleGroups, setMuscleGroups] = useState([]);
