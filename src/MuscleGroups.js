@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import MuscleGroupLink from "./MuscleGroupLink";
 
 
 function MuscleGroups() {
@@ -10,9 +11,13 @@ function MuscleGroups() {
     .then ((r) => r.json())
     .then ((musclegroups) => setMuscleGroups(musclegroups))
    }, [])
+
+   const muscleGroupsList = muscleGroups.map((muscleGroup) => <MuscleGroupLink key={muscleGroup.id} muscleGroup={muscleGroup} />)
     return (
         <div>
-            <h1> Hi </h1>
+            <ul>
+                {muscleGroupsList}
+            </ul>
         </div>
     )
 
