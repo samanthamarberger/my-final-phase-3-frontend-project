@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Exercise from "./Exercise";
+import ExerciseForm from "./ExerciseForm";
 
 function MuscleGroup(props) {
     const [muscleGroup, setMuscleGroup] = useState({
@@ -41,6 +42,7 @@ function MuscleGroup(props) {
             <br />
             {exercises}
             <br />
+            <ExerciseForm />
         </div>
     )
 }
