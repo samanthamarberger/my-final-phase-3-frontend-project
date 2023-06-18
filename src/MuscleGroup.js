@@ -43,7 +43,7 @@ function MuscleGroup(props) {
             {exercises}
             <br />
             <hr />
-            <ExerciseForm />
+            <ExerciseForm mgId={params.id}/>
         </div>
     )
 }

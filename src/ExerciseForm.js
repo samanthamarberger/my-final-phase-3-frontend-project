@@ -1,10 +1,24 @@
 import React, { useState } from "react";
 
-function ExerciseForm() {
+function ExerciseForm({ mgId }) {
     const [name, setName] = useState("");
     const [image, setImage] = useState("");
     const [howTo, setHowTo] = useState("");
     const [muscleGroupId, setMuscleGroupId] = useState("");
+
+    setMuscleGroupId(mgId);
+
+    function handleNameAdd(e) {
+        setName(e.target.value);
+    }
+
+    function handleImageAdd(e) {
+        setImage(e.target.value);
+    }
+
+    function handleHowToAdd(e) {
+        setHowTo(e.target.value);
+    }
 
     return(
         <div className="form">
