@@ -6,7 +6,9 @@ function ExerciseForm({ mgId }) {
     const [howTo, setHowTo] = useState("");
     const [muscleGroupId, setMuscleGroupId] = useState("");
 
-    setMuscleGroupId(mgId);
+    function handleId() {
+        setMuscleGroupId(mgId);
+    }
 
     function handleNameAdd(e) {
         setName(e.target.value);
@@ -18,6 +20,16 @@ function ExerciseForm({ mgId }) {
 
     function handleHowToAdd(e) {
         setHowTo(e.target.value);
+    }
+
+    function handleSubmit(e) {
+        e.preventDefault();
+        const newexercise = {
+            name: name,
+            image_url: image,
+            how_to_do: howTo,
+            muscle_group_id: muscleGroupId
+        }
     }
 
     return(
