@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function ExerciseForm({ mgId }) {
+function ExerciseForm({ mgId, onAddExercise }) {
     const [name, setName] = useState("");
     const [image, setImage] = useState("");
     const [howTo, setHowTo] = useState("");
@@ -24,12 +24,13 @@ function ExerciseForm({ mgId }) {
 
     function handleSubmit(e) {
         e.preventDefault();
-        const newexercise = {
+        const newExercise = {
             name: name,
             image_url: image,
             how_to_do: howTo,
             muscle_group_id: muscleGroupId
-        }
+        };
+        onAddExercise(newExercise);
     }
 
     return(
