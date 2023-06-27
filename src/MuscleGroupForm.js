@@ -19,7 +19,10 @@ function MuscleGroupForm({ onAddMuscleGroup }) {
             image_url: image,
             exercises: []
         };
-        onAddMuscleGroup(newMuscleGroup);
+        onAddMuscleGroup(newMuscleGroup); 
+
+        setName("");
+        setImage("");
     }
 
     return(

@@ -26,6 +26,10 @@ function ExerciseForm({ mgId, onAddExercise }) {
             muscle_group_id: mgId
         };
         onAddExercise(newExercise);
+
+        setName("");
+        setImage("");
+        setHowTo("");
     }
 
     return(
