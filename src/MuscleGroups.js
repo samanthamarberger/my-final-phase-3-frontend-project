@@ -13,13 +13,29 @@ function MuscleGroups() {
     .then ((musclegroups) => setMuscleGroups(musclegroups))
    }, [])
 
+   function frontEndAddMuscleGroup(newMuscleGroup) {
+    setMuscleGroups([...muscleGroups, newMuscleGroup])
+   }
+
+   function addMuscleGroup(newMuscleGroup) {
+    fetch("http://localhost:9292/muscle_groups", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(newMuscleGroup),
+        })
+        .then((r) => r.json())
+        .then((muscleGroup) => frontEndAddMuscleGroup(muscleGroup))
+   }
+
    const muscleGroupsList = muscleGroups.map((muscleGroup) => <MuscleGroupLink key={muscleGroup.id} muscleGroup={muscleGroup} />)
     return (
         <div>
             <ul>
                 {muscleGroupsList}
             </ul>
-            <MuscleGroupForm />
+            <MuscleGroupForm onAddMuscleGroup={addMuscleGroup}/>
         </div>
     )
 

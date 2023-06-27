@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function MuscleGroupForm() {
+function MuscleGroupForm({ onAddMuscleGroup }) {
     const [name, setName] = useState("");
     const [image, setImage] = useState("");
 
@@ -19,7 +19,7 @@ function MuscleGroupForm() {
             image_url: image,
             exercises: []
         };
-        console.log(newMuscleGroup);
+        onAddMuscleGroup(newMuscleGroup);
     }
 
     return(
