@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import MuscleGroupLink from "./MuscleGroupLink";
+import MuscleGroupForm from "./MuscleGroupForm";
 
 
 function MuscleGroups() {
@@ -18,6 +19,7 @@ function MuscleGroups() {
             <ul>
                 {muscleGroupsList}
             </ul>
+            <MuscleGroupForm />
         </div>
     )
 
