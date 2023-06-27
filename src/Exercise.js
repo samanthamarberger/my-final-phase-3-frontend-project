@@ -8,6 +8,7 @@ return(
         <h3>{exercise.name}</h3>
         <img src={exercise.image_url}/>
         <h2>{exercise.how_to_do}</h2>
+        <hr/>
     </div>
 )
 }
