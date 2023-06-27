@@ -18,8 +18,11 @@ function MuscleGroup(props) {
         .then ((muscleGroup) => setMuscleGroup(muscleGroup))
     }, [])
 
-    const exercises = muscleGroup.exercises.map((exercise) => <Exercise key={exercise.id} exercise={exercise} />)
-
+    function frontEndAddExercise(exercise) {
+        setMuscleGroup({
+            exercises: [...muscleGroup.exercises, exercise]
+        })
+    }
 
     function addExercise(newExercise) {
         fetch("http://localhost:9292/exercises", {
@@ -30,8 +33,11 @@ function MuscleGroup(props) {
             body: JSON.stringify(newExercise),
         })
         .then((r) => r.json())
-        .then((exercise) => console.log(exercise))
+        .then((exercise) => frontEndAddExercise(exercise))
     }
+
+
+    const exercises = muscleGroup.exercises.map((exercise) => <Exercise key={exercise.id} exercise={exercise} />)
 
     return (
         <div>
