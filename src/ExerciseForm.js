@@ -4,11 +4,6 @@ function ExerciseForm({ mgId, onAddExercise }) {
     const [name, setName] = useState("");
     const [image, setImage] = useState("");
     const [howTo, setHowTo] = useState("");
-    const [muscleGroupId, setMuscleGroupId] = useState("");
-
-    function handleId() {
-        setMuscleGroupId(mgId);
-    }
 
     function handleNameAdd(e) {
         setName(e.target.value);
@@ -28,28 +23,28 @@ function ExerciseForm({ mgId, onAddExercise }) {
             name: name,
             image_url: image,
             how_to_do: howTo,
-            muscle_group_id: muscleGroupId
+            muscle_group_id: mgId
         };
         onAddExercise(newExercise);
     }
 
     return(
         <div className="form">
-            <form>
+            <form onSubmit={(e) => handleSubmit(e)} className="NewExercise">
                 <label>Add a new exercise</label>
                 <label>
                     Name: 
-                    <input type="text" name="Name" value={name}/>
+                    <input type="text" name="Name" value={name} onChange={handleNameAdd}/>
                 </label>
                 <br />
                 <label>
                     Image URL:
-                    <input type="text" name="Image URL" value={image}/>
+                    <input type="text" name="Image URL" value={image} onChange={handleImageAdd}/>
                 </label>
                 <br />
                 <label>
                     How To Do:
-                    <input type="text" name="How To Do" value={howTo}/>
+                    <input type="text" name="How To Do" value={howTo} onChange={handleHowToAdd}/>
                 </label>
                 <br />
                 <button type="submit">Submit</button>
