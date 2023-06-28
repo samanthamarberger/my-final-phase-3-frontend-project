@@ -36,8 +36,35 @@ function MuscleGroup(props) {
         .then((exercise) => frontEndAddExercise(exercise))
     }
 
+    function editExercise(howTo, exerciseId) {
+        fetch(`http://localhost:9292/exercises/${exerciseId}`, {
+            method: "PATCH",
+            body: JSON.stringify({
+                how_to_do: howTo
+            }),
+            headers: {
+                "Content-Type": "application/json",
+            },
+        })
+        .then((r) => r.json())
+        .then((updatedExercise) => frontEndEditExercise(updatedExercise, exerciseId));
+    }
 
-    const exercises = muscleGroup.exercises.map((exercise) => <Exercise key={exercise.id} exercise={exercise} />)
+    function frontEndEditExercise(updatedExercise, exerciseId) {
+        setMuscleGroup(prevMuscleGroup => {
+          const updatedExercises = prevMuscleGroup.exercises.map(exercise => {
+            if (exercise.id === exerciseId) {
+              return { ...updatedExercise };
+            }
+            return exercise;
+          });
+      
+          return { ...prevMuscleGroup, exercises: updatedExercises };
+        });
+      }
+
+    const exercises = muscleGroup.exercises.map((exercise) => 
+        (<Exercise key={exercise.id} exercise={exercise} onEditExercise={editExercise} />))
 
     return (
         <div>

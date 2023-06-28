@@ -48,7 +48,8 @@ function ExerciseForm({ mgId, onAddExercise }) {
                 <br />
                 <label>
                     How To Do:
-                    <input type="text" name="How To Do" value={howTo} onChange={handleHowToAdd}/>
+                    <input type="text" name="How To Do" value={howTo}
+                        style={{ height: '100px', width: '300px' }} onChange={handleHowToAdd}/>
                 </label>
                 <br />
                 <button type="submit">Submit</button>
