@@ -87,7 +87,6 @@ function MuscleGroup(props) {
             <h2>{muscleGroup.name}</h2>
             <hr/>
             <h3>Exercises:</h3>
-            <br />
             {exercises}
             <br />
             <hr />

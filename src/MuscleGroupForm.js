@@ -27,6 +27,7 @@ function MuscleGroupForm({ onAddMuscleGroup }) {
 
     return(
         <div className="form">
+            <hr />
             <form onSubmit={(e) => handleSubmit(e)} className="NewMuscleGroup">
                 <label>Add a new muscle group</label>
                 <label>

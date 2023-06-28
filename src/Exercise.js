@@ -34,7 +34,7 @@ function Exercise({ exercise, onEditExercise, onDeleteExercise }){
             return (
                 <form onSubmit={handleSubmit}>
                     <textarea 
-                        style={{ height: '100px', width: '300px' }}
+                        className="exerciseHowTo"
                         type="text" 
                         value={tempHowTo}
                         onChange={(e) => setTempHowTo(e.target.value)}
@@ -44,15 +44,14 @@ function Exercise({ exercise, onEditExercise, onDeleteExercise }){
             )
         }
         else {
-            return <p>{exercise.how_to_do}</p>
+            return <p className="exerciseHowTo">{exercise.how_to_do}</p>
         }
     }
 
 return(
     <div>
-        <br />
-        <h3>{exercise.name}</h3>
-        <img src={exercise.image_url}/>
+        <h2 className="exerciseName">{exercise.name}</h2>
+        <img src={exercise.image_url} alt={exercise.name}/>
         {editHowTo()}
         {getButton()}
         <button className="deleteButton" onClick={() => onDeleteExercise(exercise)}>🗑️</button>

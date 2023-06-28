@@ -49,7 +49,7 @@ function ExerciseForm({ mgId, onAddExercise }) {
                 <label>
                     How To Do:
                     <textarea type="text" name="How To Do" value={howTo}
-                        style={{ height: '100px', width: '300px' }} onChange={handleHowToAdd}/>
+                         onChange={handleHowToAdd}/>
                 </label>
                 <br />
                 <button type="submit">Submit</button>
