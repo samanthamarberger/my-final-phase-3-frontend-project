@@ -5,7 +5,7 @@ import MuscleGroupForm from "./MuscleGroupForm";
 
 function MuscleGroups() {
    const [muscleGroups, setMuscleGroups] = useState([]);
-   const [muscleGroupFormFlag, setMuscleGroupFormFlag] = useState(false);
+//    const [muscleGroupFormFlag, setMuscleGroupFormFlag] = useState(false);
 
    useEffect(() => {
     fetch('http://localhost:9292/muscle_groups')
@@ -29,20 +29,7 @@ function MuscleGroups() {
         .then((muscleGroup) => frontEndAddMuscleGroup(muscleGroup))
    }
 
-//    function deleteMuscleGroup(muscleId) {
-//     fetch(`http://localhost:9292/muscle_groups/${muscleId}`, {
-//             method: "DELETE",
-//         })
-//         .then((r) => r.json())
-//         .then(() => frontEndDeleteMuscleGroup(muscleId));
-//     }
-
-//     function frontEndDeleteMuscleGroup(muscleId) {
-//         const updatedMuscleGroups = muscleGroups.filter((muscleGroup) => muscleGroup.id !== muscleId);
-//         setMuscleGroups([updatedMuscleGroups]);
-//     }
-
-   const muscleGroupsList = muscleGroups.map((muscleGroup) => <MuscleGroupLink key={muscleGroup.id} muscleGroup={muscleGroup}/>)
+   const muscleGroupsList = muscleGroups.map((muscleGroup) => <MuscleGroupLink key={muscleGroup.id} muscleGroup={muscleGroup} />)
     return (
         <div>
             <ul>
