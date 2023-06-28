@@ -63,8 +63,23 @@ function MuscleGroup(props) {
         });
       }
 
+      function deleteExercise(exercise) {
+        fetch(`http://localhost:9292/exercises/${exercise.id}`, {
+            method: "DELETE",
+        })
+        .then((r) => r.json())
+        .then(() => frontEndDeleteExercise(exercise.id));
+    }
+
+    function frontEndDeleteExercise(exerciseId) {
+        const updatedExercises = muscleGroup.exercises.filter((exercise) => exercise.id !== exerciseId);
+        setMuscleGroup({
+            exercises: [...updatedExercises]
+        });
+    }
+
     const exercises = muscleGroup.exercises.map((exercise) => 
-        (<Exercise key={exercise.id} exercise={exercise} onEditExercise={editExercise} />))
+        (<Exercise key={exercise.id} exercise={exercise} onEditExercise={editExercise} onDeleteExercise={deleteExercise}/>))
 
     return (
         <div>

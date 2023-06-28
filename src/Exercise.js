@@ -5,7 +5,7 @@ import React, { useState } from "react";
 // if it is not on it will just remain a paragraph. When the edit is on the button will 
 // become save and once the save button is pushed the new update will be sent to the server. 
 
-function Exercise({ exercise, onEditExercise }){
+function Exercise({ exercise, onEditExercise, onDeleteExercise }){
 
     const [tempHowTo, setTempHowTo] = useState(exercise.how_to_do);
     const [editButton, setEditButton] = useState(false);
@@ -48,10 +48,6 @@ function Exercise({ exercise, onEditExercise }){
         }
     }
 
-    function handleDelete() {
-        console.log(exercise)
-    }
-
 return(
     <div>
         <br />
@@ -59,7 +55,7 @@ return(
         <img src={exercise.image_url}/>
         {editHowTo()}
         {getButton()}
-        <button className="deleteButton" onClick={handleDelete}>🗑️</button>
+        <button className="deleteButton" onClick={() => onDeleteExercise(exercise)}>🗑️</button>
         <hr/>
     </div>
 )
