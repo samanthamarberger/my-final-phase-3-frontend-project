@@ -22,6 +22,7 @@ function NavBar() {
                     Muscle Groups
                 </Link>
             </nav>
+            <hr />
         </div>
     )
 }
