@@ -48,6 +48,10 @@ function Exercise({ exercise, onEditExercise }){
         }
     }
 
+    function handleDelete() {
+        console.log(exercise)
+    }
+
 return(
     <div>
         <br />
@@ -55,7 +59,7 @@ return(
         <img src={exercise.image_url}/>
         {editHowTo()}
         {getButton()}
-        <button className="deleteButton">🗑️</button>
+        <button className="deleteButton" onClick={handleDelete}>🗑️</button>
         <hr/>
     </div>
 )
