@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function ExerciseForm({ mgId, onAddExercise }) {
+function ExerciseForm({ mgId, onAddExercise, setExerciseFormFlag }) {
     const [name, setName] = useState("");
     const [image, setImage] = useState("");
     const [howTo, setHowTo] = useState("");
@@ -30,6 +30,7 @@ function ExerciseForm({ mgId, onAddExercise }) {
         setName("");
         setImage("");
         setHowTo("");
+        setExerciseFormFlag(false);
     }
 
     return(

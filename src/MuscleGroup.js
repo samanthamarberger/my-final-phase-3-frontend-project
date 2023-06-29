@@ -89,8 +89,12 @@ function MuscleGroup(props) {
             <h3>Exercises:</h3>
             {exercises}
             <br />
-            <hr />
-            <ExerciseForm mgId={params.id} onAddExercise={addExercise}/>
+            {(exerciseFormFlag)
+                ?
+                <ExerciseForm mgId={params.id} onAddExercise={addExercise} setExerciseFormFlag={setExerciseFormFlag}/>
+                :
+                <button onClick={() => setExerciseFormFlag(!exerciseFormFlag)}>Add a new exercise</button>
+            }
         </div>
     )
 }

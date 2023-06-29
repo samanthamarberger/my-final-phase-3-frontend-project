@@ -5,7 +5,7 @@ import MuscleGroupForm from "./MuscleGroupForm";
 
 function MuscleGroups() {
    const [muscleGroups, setMuscleGroups] = useState([]);
-//    const [muscleGroupFormFlag, setMuscleGroupFormFlag] = useState(false);
+   const [muscleGroupFormFlag, setMuscleGroupFormFlag] = useState(false);
 
    useEffect(() => {
     fetch('http://localhost:9292/muscle_groups')
@@ -29,13 +29,19 @@ function MuscleGroups() {
         .then((muscleGroup) => frontEndAddMuscleGroup(muscleGroup))
    }
 
+
    const muscleGroupsList = muscleGroups.map((muscleGroup) => <MuscleGroupLink key={muscleGroup.id} muscleGroup={muscleGroup} />)
     return (
         <div>
             <ul>
                 {muscleGroupsList}
             </ul>
-            <MuscleGroupForm onAddMuscleGroup={addMuscleGroup}/>
+            {(muscleGroupFormFlag) 
+                ? 
+                <MuscleGroupForm onAddMuscleGroup={addMuscleGroup} setMuscleGroupFormFlag={setMuscleGroupFormFlag}/> 
+                : 
+                <button onClick={() => setMuscleGroupFormFlag(!muscleGroupFormFlag)}>Add a new muscle group</button>
+            }
         </div>
     )
 

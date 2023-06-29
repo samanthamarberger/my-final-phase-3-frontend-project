@@ -25,7 +25,7 @@ Hello web developers! Welcome to "Your body, Your Workouts" web application. Thi
 * Browse the web application! 
 
 ### Application Purpose ###
-This web application allows the user to look at and add muscle groups and their associated exercises. the user can also add edit and delete exercises. There is a NavBar at the top that allows the user to toggle between the Home page and the Muscle Groups page.
+This web application allows the user to look at and add muscle groups and their associated exercises. The user can also add edit and delete exercises. There is a NavBar at the top that allows the user to toggle between the Home page and the Muscle Groups page.
 
 It is still in the growing process. I hope to add more functionality to it in the future, such as:
 * Adding a stretches component so that the user can find stretches based off of a muscle group

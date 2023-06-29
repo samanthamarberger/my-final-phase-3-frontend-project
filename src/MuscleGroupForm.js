@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function MuscleGroupForm({ onAddMuscleGroup }) {
+function MuscleGroupForm({ onAddMuscleGroup, setMuscleGroupFormFlag }) {
     const [name, setName] = useState("");
     const [image, setImage] = useState("");
 
@@ -23,6 +23,7 @@ function MuscleGroupForm({ onAddMuscleGroup }) {
 
         setName("");
         setImage("");
+        setMuscleGroupFormFlag(false);
     }
 
     return(
