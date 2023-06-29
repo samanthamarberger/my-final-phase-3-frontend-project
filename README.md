@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+# Project 3: Your Body, Your Workouts #
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Description ###
 
-## Available Scripts
+Hello web developers! Welcome to "Your body, Your Workouts" web application. This is a single page web application that I built using REACT js for the front end, and Sinatra for my server. This single page application allows its user to view various workouts depending upon the muscle group they want to target. The user can add muscle groups, and add, delete, or edit workouts.
 
-In the project directory, you can run:
+### Setup Instructions ###
 
-### `npm start`
+* First open the [Backend Repository](https://github.com/samanthamarberger/phase-3-sinatra-react-project)
+* Fork and clone this repository
+* Run bundle install to install the necessary gems
+* Start up your server by running 
+     ```bash
+      bundle exec rake server 
+* You will be able to find the server at 
+      http://localhost:9292/muscle_groups
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* Fork and clone the frontend repository 
+* In terminal run 
+    ```
+        npm install
+        npm install react-router-dom
+        npm start
+    ```
+* Browse the web application! 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Application Purpose ###
+This web application allows the user to look at and add muscle groups and their associated exercises. the user can also add edit and delete exercises. There is a NavBar at the top that allows the user to toggle between the Home page and the Muscle Groups page.
 
-### `npm test`
+It is still in the growing process. I hope to add more functionality to it in the future, such as:
+* Adding a stretches component so that the user can find stretches based off of a muscle group
+* Allow the how to do's to be put in as steps in an array and output in a numbered list.
+* How to videos so that the user of the application can get a better idea of proper form.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
