@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import Exercise from "./Exercise";
 import ExerciseForm from "./ExerciseForm";
 
-function MuscleGroup(props) {
+function MuscleGroup() {
     const [muscleGroup, setMuscleGroup] = useState({
         exercises: []
     });
